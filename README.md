@@ -19,21 +19,21 @@ _pics source: https://www.youtube.com/watch?v=HBKXu9fHnuo_
 ## Automatic Assessment of BBS
 
 Nowadays an appointment at the hospital is needed to perform the BBS test, and patients need to wait for a physiotherapist to be available for guiding the test. These appointments can be due to a long time, and require human resources that might not be available.
-Thus, our goal is to develop an automated system to perform the BBS test, eliminating the need for hospital visits, reducing workload at crowded hospitals, and at the same time increase the number of elderly that can be diagnosed.
+Thus, our goal is to develop an automated system to perform the BBS test, eliminating the need for hospital visits, reducing workload at crowded hospitals, and at the same time increasing the number of elderly that can be diagnosed.
 
 ## Data Representation
 
 For the data representation we have used a novel multi camera tracking system, which consists of two self-calibrated Kinect cameras, and recorded 130 subjects performing the 14 BBS tasks while being supervised by medical professionals who have given the score labels for each session.
-The output of the system is RGB color frames, depth images which illustrate the 3D points around the subjects and on the floor, and body skeletons which consist of 25 3D points that describe the posture and position of the subject.
+The output of the system is: RGB color frames, depth images which illustrate the 3D points around the subjects and on the floor, and body skeletons which consist of 25 3D points that describe the posture and position of the subject.
 
 ![skeleton](https://user-images.githubusercontent.com/78589884/120074551-0cfddd00-c0a6-11eb-86a5-5e44a03dabc8.png)
 <img src="https://github.com/masalha-alaa/fall-risk-prediction/blob/master/docs/task9.gif" width="250" alt="depth image gif"/>
 
 ## Feature Extraction
 
-As mentioned earlier, output of the recording system is skeletal, RGB, and depth data representing each frame of the session. For example, frame #42 of a particular patient in a particular task could have the left foot skeleton joint at (1.2, -0.7, 0.5) relatively to the Kinect camera. From these data we have built additional features which exploit these coordinates, such as several angles and distances between body joints (per frame), thus coming up with a features table per each recording.
+As mentioned earlier, output of the recording system is skeletal, RGB, and depth data representing each frame of the session. For example, frame #42 of a particular patient in a particular task could have the left foot skeleton joint at (1.2, -0.7, 0.5) relative to the Kinect camera. From these data we have built additional features which exploit these coordinates, such as several angles and distances between body joints (per frame), thus coming up with a features table per each recording.
 It's worth mentioning that the features were chosen by the collaboratoin of the whole team (me, my supervisors, and the physiotherapists).
-After building the per-frame feature tables, we had to make a collective features row for each recording, which would represent it in the final features table (a table whose rows are sessions, e.g. "patient 42, task 12", and its columns are features). To make the representative feature columns, we calculated various measurements of the per-patient features, such as averages / STDs / histograms / etc., and used them as our new and final features.
+After building the per-frame feature tables, we had to make a collective features row for each recording, which would represent the recording in the final features table (a table whose rows are sessions, e.g. "patient 42, task 12", and its columns are features). To make the representative feature columns, we calculated various measurements of the per-patient features, such as averages / STDs / histograms / etc., and used them as our new and final features.
 
 ## Classifier
 
@@ -47,7 +47,7 @@ After tuning up the final classifier with GridSearchCV, we achieved a final accu
 
 ## Final Notes
 
-Please head up to the published paper mentioned above for more details about the used algorithms and methodologies, as well as challenges we have faced and how we solved them.
+Please head over to the [published paper](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w19/Masalha_Predicting_Fall_Probability_Based_on_a_Validated_Balance_Scale_CVPRW_2020_paper.pdf) mentioned above for more details about the used algorithms and methodologies, as well as challenges we have faced and how we solved them.
 
 ## Thanks
 
