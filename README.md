@@ -2,7 +2,7 @@
 
 This is an overview of my MSc thesis in the field of Machine Learning **(code is not published)**, under the supervision of Prof Ilan Shimshoni and Prof. Hagit Hel-Or, in which our task was to predict the BBS balance scale of adults, and thus estimate their chance of losing balance and falling in regular day-to-day tasks.
 
-I have presented the paper in an international online CVPR workshop on June 2020. The full paper can be found at https://openaccess.thecvf.com/content_CVPRW_2020/papers/w19/Masalha_Predicting_Fall_Probability_Based_on_a_Validated_Balance_Scale_CVPRW_2020_paper.pdf, and my thesis can be found here: https://eu01.alma.exlibrisgroup.com/discovery/delivery/972HAI_MAIN:AlmaGeneralView/12230844110002791.
+I have presented the paper in an international online CVPR workshop on June 2020. The full paper can be found at https://openaccess.thecvf.com/content_CVPRW_2020/papers/w19/Masalha_Predicting_Fall_Probability_Based_on_a_Validated_Balance_Scale_CVPRW_2020_paper.pdf, and my thesis can be found at: https://eu01.alma.exlibrisgroup.com/discovery/delivery/972HAI_MAIN:AlmaGeneralView/12230844110002791.
 
 
 ## Background
